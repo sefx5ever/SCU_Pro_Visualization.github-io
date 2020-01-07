@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css?family=Long+Cang|ZCOOL+QingKe+HuangYou&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'STXihei';
+}
+
+/****** Navigator ******/
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.nav{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+    height: 10vh;
+    box-shadow: 2px 3px 2px gray;
+}
+
+.nav-option-fix img{
+    width: 90%;
+}
+
+.nav-option-fix, .nav-option-visible{
+    width: 230px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.nav-option-fix{
+    font-weight: bold;
+    white-space: pre-wrap;
+    font-size: 23px;
+}
+
+.nav-option-visible{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    font-weight: bold;
+    position: relative;
+    transition:color 0.25s ease;
+    border:3px solid white;
+    letter-spacing: 8px;
+}
+
+.nav-option-visible a{
+    text-decoration: none;
+    color:darkblue;  
+}
+
+.nav-option-visible:hover{
+    border: none;
+    border-radius: 15px;
+    background-color: #56a8df;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-option-visible a:hover{
+    color: white;
+}
+
+#nav-option-switch{
+    display: none;
+}
+
+input{
+    border: 1px solid #dddd;
+    border-radius: 15px;
+    height: 28px;
+    width: 200px;
+    text-align: center;
+    background-image: url("../picture/magnifying-glass.png");
+    background-size: 15px 15px;
+    background-position: 15px 6px;
+    background-repeat: no-repeat;
+}
+/* 
+.nav-option-visible:nth-last-child(3)::before{
+    content: '| '; 
+    background-color: #3498db;
+    color: white;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.nav-option-visible:nth-last-child(2)::before{
+    content: '| '; 
+    background-color: #ffd071;
+    color: white;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.nav-option-visible:nth-last-child(1)::before{
+    content: '| '; 
+    background-color: #f0776c;
+    color: white;
+    display: inline-block;
+    margin-right: 10px;
+} */
+
+/****** Video ******/
+.section-1{
+    height: 60vh;
+    min-height: 25rem;
+    overflow: hidden;
+}
+
+.section-video{
+    width: fit-content;
+    position: relative;
+    z-index: -2;
+}
+
+video{
+    pointer-events: none;
+    opacity: 0.7;
+    position: relative;
+}
+
+.section-video-sub1{
+    display: block;
+    font-size: 100px;
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    text-align: center;
+    letter-spacing: 40px;
+    white-space: pre-wrap;
+    height: auto;
+    z-index: -2;
+}
+
+.section-video-sub2{
+    display: block;
+    font-size: 70px;
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+    letter-spacing: 40px;
+    white-space: pre-wrap;
+    height: auto;
+    z-index: -2;
+}
+
+/****** Map ******/
+.section2{
+    overflow: hidden;
+    z-index: -3;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.section-map-title{
+    font-size: 50px;
+    font-weight: bold;
+    color: #77919d;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.section-map-sub{
+    font-size: 25px;
+    letter-spacing: 5px;
+    line-height: 35px;
+    padding: 1% 3% 1% 3%;
+}
+/****** Cloud ******/
+@keyframes blink {
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+}
+
+.section-3{
+    overflow: hidden;
+    /* z-index: -3; */
+    box-shadow: 0px 0px 5px gray;
+}
+
+.section-cloud{
+    position: relative;
+    overflow: hidden;
+    /* z-index: -3; */
+}
+
+#section-cloud-1{
+    width: 100%;
+    height: 60vh;
+    border: none;
+}
+
+.section-cloud-button-left, .section-cloud-button-right{
+    width: 2%;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.section-cloud-button-left{
+    position: absolute;
+    top: 40%;
+    left: 0;
+}
+
+.section-cloud-button-right{
+    position: absolute;
+    top: 40%;
+    right: 0;
+}
+
+.section-cloud-button-left:hover, .section-cloud-button-right:hover{
+    background-color: #dae9f4;
+    color: black;
+}
+
+.section-cloud-title{
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    font-size: 100px;
+    position: absolute;
+    bottom: 15%;
+    right: 40%;
+    /* writing-mode: vertical-rl;
+    text-orientation: upright; */
+    letter-spacing: 40px;
+    animation: blink 3s linear infinite;
+    color: #a79c8e;
+}
+
+.section-cloud-sub{
+    background-color: #eb9f9f;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    box-shadow: 0px 0px 5px gray;
+    letter-spacing: 10px;
+    font-family: 'Fong Yuan', cursive;
+    padding: 5px 0 5px 0;
+}
+
+.section-cloud-title:hover::before{
+    content: "文字越大，出現越頻密！";
+    display: block;
+    font-size: 30px;
+}
+
+.section-cloud-title:hover{
+    animation-play-state: paused;
+    position: absolute;
+    bottom: 15%;
+    right: 31%;
+    text-align: center;
+}
+
+/****** Fuild ******/
+.section-4{
+    position: relative;
+    padding-bottom: 1%;
+    overflow: hidden;
+    z-index: -3;
+}
+
+.section-water-title{
+    font-size: 50px;
+    text-align: center;
+    padding: 1% 0 1% 0;
+}
+
+.section-waterfuild{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-waterfuild span{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/****** Donation ******/
+.section-5{
+    overflow: hidden;
+    z-index: -3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 5px gray;
+}
+
+.section-donate{
+    width: 49%;
+}
+
+.section-donate-sub{
+    width: 50%;
+}
+
+.section-donate-sub div{
+    font-weight: bolder;
+    font-size: 55px;
+    text-align: center;
+    padding-bottom: 3%;
+    color: #274c5e;
+}
+
+.section-donate-sub p{
+    padding: 0 3% 0 3%;
+    letter-spacing: 5px;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+/****** Footer ******/
+.copyright{
+    /* letter-spacing: 4px; */
+    background-color: #dae9f4;
+    font-weight: bold;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PMingLiU';
+}
+
+@media screen and (max-width: 850px){
+    .nav{
+        height: 25vh;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        padding-bottom: 3%;
+    }
+
+    .nav-option-fix{
+        width: 240px;
+        text-align: center;
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-option-visible{
+        display: none;
+    }
+
+    #nav-option-switch{
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    select{
+        height: 28px;
+        width: 100%;
+        border-radius: 15px;
+        text-align-last: center;
+    }
+
+    .section-video-sub1{
+        top: 25%;
+        left: 7%;
+        letter-spacing: 70px;
+    }
+
+    .section-video-sub2{
+        display: none;
+    }
+}
